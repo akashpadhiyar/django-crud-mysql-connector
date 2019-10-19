@@ -1,0 +1,15 @@
+
+{% load static %}
+ 
+<a href="/category">Display</a>
+
+<form method="POST" action="/category/update/"  id="myform" enctype="multipart/form-data">
+    {% csrf_token %}
+
+     <input type="hidden" name="txt1" value="{{categories.0}}" >
+Name  <input type="text" name="txt2" value="{{categories.1}}">
+   <br/>
+    <button type="submit" >Update Data</button>
+</form>
+</div>
+

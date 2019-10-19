@@ -1,0 +1,30 @@
+{% load static %}
+
+<a href="/category/create">Add</a>
+<table border='1'>
+    <thead class="thead">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    {% for i in categories %}
+    <tr>
+        <td>{{i.0}}</td>
+        <td>{{i.1}}</td>
+        <td><a href='edit/{{i.0}}'>Edit</a> | <a href='delete/{{i.0}}'>Delete</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<script type="text/javascript">
+    function delMsg() {
+        if (confirm("Are you sure about deleting record?")) {
+            alert('1 row deleted.');
+            return true;
+        }
+        else
+            return false;
+    }
+</script>

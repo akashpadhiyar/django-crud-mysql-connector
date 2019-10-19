@@ -1,0 +1,14 @@
+
+{% load static %}
+ 
+    <a href="/category">Display</a>
+ 
+	<form method="POST" action="/category/inserted/"  id="myform" enctype="multipart/form-data">
+		{% csrf_token %}
+
+    Name  <input type="text" name="txt1" >
+       <br/>
+        <button type="submit" >Insert Data</button>
+	</form>
+</div>
+ 
